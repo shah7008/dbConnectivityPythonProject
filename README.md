@@ -6,4 +6,5 @@
 5. Create New Branch
 6. Create Python File in pycharm project (Already Clone)
 7. Create Pull Request
-8. Merge branch
+8. Merge Pull request
+9. Pycharm update project using option rebase
