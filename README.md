@@ -3,5 +3,7 @@
 2. Clone Repository in PyCharm
 3. Signup to https://www.db4free.net/
 4. Login to phpmyadmin
-5. Create Python File in pycharm project (Already Clone)
-6. 
+5. Create New Branch
+6. Create Python File in pycharm project (Already Clone)
+7. Create Pull Request
+8. Merge branch
