@@ -17,9 +17,9 @@ def fetchstudentData():
     rows=mycursor.fetchall()
     for students in mycursor:
       print(students)
+    print("student data printed successfully")
   except Exception as e:
     print(e)
-
   finally:
     mydb.close()
     print("connection Closed")
