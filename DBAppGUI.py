@@ -17,7 +17,7 @@ root.title("Database Viewer")
 root.geometry("600x300")
 
 # Treeview Widget for Table
-columns = ("ID", "Name", "DOB", "Gender", "Email", "Phone", "Father Name", "Mother Name", "AddressLine1","AddressLine2")
+columns = ("ID", "Name", "Address", "Phone")
 tree = ttk.Treeview(root, columns=columns, show="headings")
 
 # Set Column Headings

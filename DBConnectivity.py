@@ -1,26 +1,22 @@
 import mysql.connector
 
-mydb = mysql.connector.connect(
-  host="db4free.net",
-  user="stdmgm",
-  password="*$=VJ7\"xVw8b^}n",
-  database="studentmanage"
-
-)
-
 def fetchstudentData():
-  try:
-    print(mydb)
-
-    mycursor = mydb.cursor()
-    mycursor.execute("select * from student")
-    rows=mycursor.fetchall()
-    for students in mycursor:
-      print(students)
-    print("student data printed successfully")
-  except Exception as e:
-    print(e)
-  finally:
-    mydb.close()
-    print("connection Closed")
-    return rows
+    try:
+        conn = mysql.connector.connect(
+            host="localhost",
+            user="root",
+            password="",
+            database="student_managment_with_python"
+        )
+        mycursor = conn.cursor()
+        mycursor.execute("SELECT * FROM student_info")
+        rows = mycursor.fetchall()
+        print("Student data fetched successfully")
+        return rows
+    except Exception as e:
+        print("Error:", e)
+        return []
+    finally:
+        if 'conn' in locals() and conn.is_connected():
+            conn.close()
+            print("Connection closed")
